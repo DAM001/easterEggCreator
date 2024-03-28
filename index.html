@@ -9,10 +9,23 @@
 </head>
 
 <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
-    <input type="color" id="colorPicker">
-    <input type="range" id="brushSize" min="1" max="50" value="5">
+    <header>
+        <h1>Easter Egg Creator</h1>
+        <h2>by DAM</h2>
+    </header>
 
+    <div class="content">
+        <div class="block">
+            <canvas id="canvas" width="300" height="400"></canvas>
+        </div>
+        <div class="block">
+            <input type="color" id="colorPicker">
+            <input type="range" id="brushSize" min="1" max="50" value="5">
+        </div>
+    </div>
+
+
+    <script src="./src/tools/draw.js"></script>
     <script src="./src/app.js"></script>
 </body>
 
