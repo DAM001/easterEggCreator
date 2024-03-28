@@ -30,3 +30,7 @@ function drawEggShape() {
 }
 
 drawEggShape();
+
+function openMainPage() {
+    window.location.href = './index.html';
+}

@@ -18,28 +18,21 @@
 
     <div class="content">
         <div class="block">
-            <h2>Your egg</h2>
-            <canvas id="canvas" width="300" height="400"></canvas>
+            <h2>Create!</h2>
+            <p>Create your own Easter Egg! Then share it with the world! ;)</p>
+            <button onclick="openEditor()">Create</button>
         </div>
-        <div class="block">
-            <h2>Paint tools</h2>
-            <p>Brush size:</p>
-            <input class="input-box" type="range" id="brushSize" min="1" max="50" value="5">
-            <p>Color:</p>
-            <div class="colors"></div>
-            <!--<input type="color" id="colorPicker">-->
+
+        <div class="space">
+            <h2>Previous creations</h2>
+        </div>
+
+        <div id="galery">
+
         </div>
     </div>
 
-    <div class="block">
-        <h2>Save your creation</h2>
-        <input class="input-box" type="text" id="name" placeholder="Egg name">
-        <button id="saveBtn">Save</button>
-    </div>
-
-    <script src="./src/tools/draw.js"></script>
-    <script src="./src/tools/colorPalette.js"></script>
-    <script src="./src/app.js"></script>
+    <script src="./src/galery/app.js"></script>
 </body>
 
 </html>

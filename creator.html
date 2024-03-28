@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg Decorator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&amp;family=Russo+One&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Easter Egg Creator</h1>
+        <h2>by DAM</h2>
+    </header>
+
+    <div class="content">
+        <div class="block">
+            <h2>Your egg</h2>
+            <canvas id="canvas" width="300" height="400"></canvas>
+        </div>
+        <div class="block">
+            <h2>Paint tools</h2>
+            <p>Brush size:</p>
+            <input class="input-box" type="range" id="brushSize" min="1" max="50" value="5">
+            <p>Color:</p>
+            <div class="colors"></div>
+            <!--<input type="color" id="colorPicker">-->
+        </div>
+
+        <div class="block">
+            <h2>Save your creation</h2>
+            <input class="input-box" type="text" id="name" placeholder="Egg name">
+            <button id="saveBtn" onclick="saveImage()">Save</button>
+        </div>
+
+        <div class="block">
+            <h2>See others creations</h2>
+            <p>Go back to the galery view where you can check out all the created eggs so far!</p>
+            <button onclick="openMainPage()">Check galery</button>
+        </div>
+    </div>
+
+    <script src="./src/creator/tools/draw.js"></script>
+    <script src="./src/creator/tools/colorPalette.js"></script>
+    <script src="./src/creator/saveImage.js"></script>
+    <script src="./src/creator/app.js"></script>
+</body>
+
+</html>

@@ -133,6 +133,12 @@ textarea {
     margin: var(--space-2) 0 0;
 }
 
+.space {
+    margin: 60px auto 12px;
+    color: var(--theme-color);
+    text-align: center;
+}
+
 
 /* Slider */
 
@@ -184,4 +190,21 @@ input[type=range]::-webkit-slider-thumb:hover {
 .color-button.selected {
     box-shadow: inset 2px 2px 8px 4px var(--background-color);
     border: solid 2px var(--theme-color);
+}
+
+#galery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 3fr));
+    gap: var(--space-2);
+    padding: 10px;
+}
+
+#galery .block {
+    margin: 0;
+    width: calc(100% - var(--space-2) * 2);
+    height: auto;
+}
+
+#galery img {
+    width: 100%;
 }
