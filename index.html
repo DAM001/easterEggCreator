@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easter Egg Decorator</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&amp;family=Russo+One&amp;display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
@@ -16,16 +18,27 @@
 
     <div class="content">
         <div class="block">
+            <h2>Your egg</h2>
             <canvas id="canvas" width="300" height="400"></canvas>
         </div>
         <div class="block">
-            <input type="color" id="colorPicker">
-            <input type="range" id="brushSize" min="1" max="50" value="5">
+            <h2>Paint tools</h2>
+            <p>Brush size:</p>
+            <input class="input-box" type="range" id="brushSize" min="1" max="50" value="5">
+            <p>Color:</p>
+            <div class="colors"></div>
+            <!--<input type="color" id="colorPicker">-->
         </div>
     </div>
 
+    <div class="block">
+        <h2>Save your creation</h2>
+        <input class="input-box" type="text" id="name" placeholder="Egg name">
+        <button id="saveBtn">Save</button>
+    </div>
 
     <script src="./src/tools/draw.js"></script>
+    <script src="./src/tools/colorPalette.js"></script>
     <script src="./src/app.js"></script>
 </body>
 

@@ -1,9 +1,9 @@
 let brushColor = '#000';
 let brushSize = 5;
 
-document.getElementById('colorPicker').addEventListener('change', (e) => {
+/*document.getElementById('colorPicker').addEventListener('change', (e) => {
     brushColor = e.target.value;
-});
+});*/
 
 document.getElementById('brushSize').addEventListener('input', (e) => {
     brushSize = e.target.value;

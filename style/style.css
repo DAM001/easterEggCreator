@@ -1,8 +1,8 @@
 :root {
     --background-color: #1c1b20;
     --secondary-background-color: #2E313E;
-    --theme-color: #565697;
-    --theme-highlight-color: #7373BA;
+    --theme-color: #49a577;
+    --theme-highlight-color: #6fbf97;
     --text-color: #FFFFFF;
     --border-radius: 16px;
     --space-1: 4px;
@@ -77,4 +77,111 @@ canvas {
     display: block;
     margin: auto;
     background-color: var(--secondary-background-color);
+}
+
+
+/* INPUT */
+
+button,
+select {
+    font-weight: 900;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    padding: var(--space-2) var(--space-3);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--theme-color);
+    box-shadow: inset 1px 1px 4px -1px var(--text-color);
+    cursor: pointer;
+    transition: .2s;
+}
+
+select:focus {
+    outline: none;
+}
+
+button {
+    outline: 0px;
+    margin-left: var(--space-1);
+}
+
+button:hover,
+select:hover {
+    background-color: var(--theme-highlight-color);
+}
+
+input,
+textarea {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    outline: 0px;
+    border: none;
+}
+
+.input-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    font-size: 14px;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 2px 2px 8px 4px var(--background-color);
+}
+
+#saveBtn {
+    margin: var(--space-2) 0 0;
+}
+
+
+/* Slider */
+
+input[type=range] {
+    appearance: none;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    padding: var(--space-2);
+    font-size: 14px;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: inset 2px 2px 8px 4px var(--background-color);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 42px;
+    height: 24px;
+    background: var(--theme-color);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 4px 2px var(--background-color);
+    transition: .2s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background-color: var(--theme-highlight-color);
+}
+
+
+/* Color palette */
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: var(--space-2);
+}
+
+.color-button {
+    width: 40px;
+    height: 40px;
+}
+
+.color-button:hover {
+    opacity: 0.8;
+}
+
+.color-button.selected {
+    box-shadow: inset 2px 2px 8px 4px var(--background-color);
+    border: solid 2px var(--theme-color);
 }
