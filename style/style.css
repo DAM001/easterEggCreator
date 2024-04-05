@@ -69,6 +69,11 @@ p {
     box-shadow: inset 4px 4px 4px -2px var(--theme-color);
 }
 
+.block:has(canvas)
+{
+    text-align: center;
+}
+
 .block h2 {
     display: inline-block;
 }
@@ -207,4 +212,29 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 #galery img {
     width: 100%;
+}
+
+.canvas-cont
+{
+    display: inline-block;
+    margin: auto;
+}
+.img-cont, .canvas-cont
+{
+    position: relative;
+}
+.img-cont:after, .canvas-cont:after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 76%;
+    height: 88.5%;
+    left: 50%;
+    top: 50%;
+    background-image: radial-gradient(circle at 36% 34%, rgba(255, 255, 255, .2), transparent, rgba(0, 0, 0, .6));
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }

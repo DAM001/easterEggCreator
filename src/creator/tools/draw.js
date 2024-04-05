@@ -22,12 +22,14 @@ function draw(e) {
     // Get the bounding rectangle of the canvas
     const rect = canvas.getBoundingClientRect();
 
+    let strength = 1
     // Calculate the correct mouse or touch position accounting for scrolling
     let x, y;
     if (e.touches) {
         // For touch events
         x = e.touches[0].clientX - rect.left;
         y = e.touches[0].clientY - rect.top;
+        strength = e.touches[0].force
     } else {
         // For mouse events
         x = e.clientX - rect.left;
@@ -38,7 +40,9 @@ function draw(e) {
     x *= canvas.width / rect.width;
     y *= canvas.height / rect.height;
 
-    ctx.lineWidth = brushSize;
+
+
+    ctx.lineWidth = brushSize * strength;
     ctx.lineCap = 'round';
     ctx.strokeStyle = brushColor;
 
