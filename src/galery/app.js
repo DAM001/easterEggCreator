@@ -22,9 +22,13 @@ fetch('./backend/loadImages.php')
             imgElement.src = imagePath; // Set the source to the image path
             imgElement.alt = imageTitle; // Use the title as alt text for accessibility
 
+            const imgCont = document.createElement('div')
+            imgCont.className = 'img-cont'
+            imgCont.append(imgElement)
+
             // Assemble the block
             blockDiv.appendChild(titleH2);
-            blockDiv.appendChild(imgElement);
+            blockDiv.appendChild(imgCont);
 
             // Append the block to the gallery
             gallery.appendChild(blockDiv);
